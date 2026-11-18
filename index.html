@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — Tumba</title>
+  <style>
+    :root {
+      --bg: #f8f6fc;
+      --card: #ffffff;
+      --text: #24212d;
+      --muted: #595362;
+      --accent: #633d96;
+      --border: #d5cddf;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101119;
+        --card: #1b1c29;
+        --text: #f2f2f5;
+        --muted: #d0cdd9;
+        --accent: #d3bfff;
+        --border: #514c61;
+      }
+    }
+    body {
+      margin: 0;
+      padding: 24px 16px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.75rem;
+      color: var(--accent);
+    }
+    h2 {
+      margin-top: 1.6rem;
+      font-size: 1.15rem;
+      color: var(--accent);
+    }
+    p, li {
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+    .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    a {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Política de Privacidade — Tumba</h1>
+    <p class="meta">Aplicativo Android: <strong>Tumba</strong> (<code>com.tumba.app</code>) • Última atualização: 18 de novembro de 2026</p>
+
+    <p>
+      Esta Política de Privacidade descreve como o aplicativo <strong>Tumba</strong> lida com informações dos usuários.
+      O Tumba foi projetado com foco em simplicidade e privacidade máxima: <strong>não exigimos cadastro e não coletamos dados pessoais</strong>.
+    </p>
+
+    <h2>1. Dados pessoais não coletados</h2>
+    <p>
+      O aplicativo não solicita nem coleta nome, e-mail, número de telefone, localização, lista de contatos,
+      identificadores de publicidade ou qualquer dado pessoal identificável. O Tumba não exibe anúncios e não utiliza SDKs de rastreamento ou análise comportamental.
+    </p>
+
+    <h2>2. Mensagens privadas e cifragem</h2>
+    <p>
+      As caixinhas privadas são cifradas localmente no dispositivo do usuário (XChaCha20-Poly1305 com derivação de chave Argon2id)
+      antes de serem enviadas ao servidor. O servidor armazena apenas o conteúdo cifrado e verificadores criptográficos de senha.
+      <strong>Nem o desenvolvedor nem o servidor possuem acesso ao conteúdo original ou às suas senhas.</strong>
+    </p>
+
+    <h2>3. Caixinhas públicas (sem senha)</h2>
+    <p>
+      Quando o usuário opta por criar uma caixinha marcando a opção <strong>"Sem senha"</strong>, o texto torna-se público e acessível
+      por qualquer pessoa que possua o nome da caixinha ou o link de leitura. Não publique informações confidenciais, dados pessoais
+      de terceiros ou conteúdo sensível em caixinhas públicas.
+    </p>
+
+    <h2>4. Armazenamento local no dispositivo</h2>
+    <ul>
+      <li>Nenhuma mensagem, senha ou nome de caixinha é salvo na memória permanente do aparelho.</li>
+      <li>Ao sair do aplicativo ou encerrar a sessão, os dados exibidos na tela são limpos.</li>
+      <li>Apenas a preferência visual de tema (claro ou escuro) é salva localmente em <code>SharedPreferences</code> privado do próprio aplicativo, sem exigir nenhuma permissão especial.</li>
+    </ul>
+
+    <h2>5. Segurança, rede e registros técnicos</h2>
+    <p>
+      O aplicativo utiliza apenas a permissão de acesso à internet (<code>INTERNET</code>) para se comunicar com a API do serviço via HTTPS.
+      Para prevenção contra abuso, spam e ataques de força bruta, a infraestrutura (hospedada em Render e Supabase) processa temporariamente
+      endereços IP em memória para controle de taxa e bloqueio progressivo, sem criação de perfis ou associação a identidades pessoais.
+      Caso o usuário ative autenticação em duas etapas (2FA), o segredo e os códigos de recuperação são armazenados cifrados exclusivamente para validar alterações e exclusões.
+    </p>
+
+    <h2>6. Compartilhamento com terceiros</h2>
+    <p>
+      Não vendemos, alugamos ou compartilhamos informações de usuários com terceiros, anunciantes ou corretores de dados.
+    </p>
+
+    <h2>7. Responsabilidade sobre conteúdo e senhas</h2>
+    <ul>
+      <li>Por não termos acesso às senhas nem armazenarmos chaves de recuperação, <strong>não é possível recuperar mensagens</strong> em caso de perda da senha de leitura ou da senha mestra.</li>
+      <li>O usuário é integralmente responsável pelo conteúdo que cria, armazena ou compartilha por meio do aplicativo, comprometendo-se a não utilizá-lo para fins ilícitos.</li>
+      <li>O desenvolvedor não se responsabiliza por perdas decorrentes de esquecimento de senhas, expiração agendada da caixinha ou compartilhamento do link/senha pelo próprio usuário.</li>
+    </ul>
+
+    <h2>8. Exclusão de dados</h2>
+    <p>
+      O usuário pode excluir qualquer caixinha a qualquer momento diretamente pelo aplicativo utilizando a senha mestra.
+      Caixinhas com data de autodestruição agendada têm o acesso bloqueado após o vencimento e são removidas do banco de dados na rotina de limpeza.
+    </p>
+
+    <h2>9. Contato</h2>
+    <p>
+      Em caso de dúvidas sobre esta Política de Privacidade, entre em contato abrindo uma solicitação em:
+      <a href="https://github.com/sergiobetween/tumba-privacy/issues">github.com/sergiobetween/tumba-privacy/issues</a>.
+    </p>
+  </main>
+</body>
+</html>
